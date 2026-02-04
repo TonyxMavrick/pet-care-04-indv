@@ -1,0 +1,193 @@
+/* Custom styles for Happy Tails Hub */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Slider Customization */
+.hero-slider .slick-dots {
+    bottom: 30px;
+}
+
+.hero-slider .slick-dots li button:before {
+    font-size: 12px;
+    color: white;
+    opacity: 0.5;
+}
+
+.hero-slider .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #ea580c;
+}
+
+/* Card hover effects */
+.service-card,
+.blog-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover,
+.blog-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Image zoom on hover */
+.image-zoom-container {
+    overflow: hidden;
+}
+
+.image-zoom {
+    transition: transform 0.3s ease;
+}
+
+.image-zoom-container:hover .image-zoom {
+    transform: scale(1.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ea580c;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c2410c;
+}
+
+/* Prose styles for blog content */
+.prose h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.prose p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+    color: #374151;
+}
+
+.prose ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.prose ul li {
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+/* Accordion styles */
+.accordion-item {
+    border: 1px solid #e5e7eb;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.accordion-button:hover {
+    background-color: #f9fafb;
+}
+
+.accordion-button.active {
+    background-color: #fff7ed;
+    color: #ea580c;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: white;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+    padding: 1rem 1.5rem;
+}
+
+.accordion-icon {
+    transition: transform 0.3s;
+}
+
+.accordion-button.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Form styles */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #ea580c;
+    ring: 2px;
+    ring-color: #fed7aa;
+}
+
+/* Loading animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease;
+}
+
+/* Mobile menu animation */
+#mobileMenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#mobileMenu.active {
+    max-height: 500px;
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Print styles */
+@media print {
+    header,
+    footer,
+    .no-print {
+        display: none;
+    }
+}
